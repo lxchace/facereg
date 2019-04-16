@@ -1,0 +1,65 @@
+<div class="row main">
+    <div class="col-md-3">
+        <div class="icon">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-users fa-5x" style="color:white"></i>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="font"><?php print_r(getUserNum()); ?></h1>
+                    <h5 class="font">用户数量</h5>
+                </div>
+            </div>
+            <div class="top">
+                <h5 class="font">用户统计</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="icon">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-file-text-o fa-5x" style="color:white"></i>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="font"><?php print_r(getSignNum()); ?></h1>
+                    <h5 class="font">签到人数</h5>
+                </div>
+            </div>
+            <div class="top">
+                <h5 class="font">签到统计</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="icon">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-cloud-upload fa-5x" style="color:white"></i>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="font"><?php print_r(getCheckNum()); ?></h1>
+                    <h5 class="font">待录入人数</h5>
+                </div>
+            </div>
+            <div class="top">
+                <h5 class="font">录入统计</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row main">
+    <div class="col-md-6">
+        <div class="icon">
+            <div class="row">
+                <div class="progbar">
+                    <?php getTop3Users(); ?>
+                </div>
+            </div>
+            <div class="top">
+                <h5 class="font">签到排行</h5>
+            </div>
+        </div>
+    </div>
+</div>

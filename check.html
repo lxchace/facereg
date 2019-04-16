@@ -1,0 +1,43 @@
+        <div class="row main">
+            <form class="form-horizontal" action="subinf.php" method="POST">
+                <div class="form-group">
+                    <label for="ID" class="col-sm-2 control-label font">ID</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" id="ID" name="ID" value="<?php echo $_GET["id"]; ?>" readonly="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="SID" class="col-sm-2 control-label font">SID</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="SID" name="SID" value="<?php echo $inf['SID']; ?>" placeholder="请输入学号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Name" class="col-sm-2 control-label font">姓名</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="Name" name="Name" value="<?php echo $inf['Name']; ?>" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="FaceImage" class="col-sm-2 control-label font">头像</label>
+                    <div class="col-sm-2">
+                        <img src="<?php echo $inf['img']; ?>" class='img-thumbnail' id="FaceImage" />
+                    </div>
+                </div>
+                <?php 
+                    if($_GET["action"]=='modify'){
+                        echo '<div class="form-group">
+                                <label for="Usercheck" class="col-sm-2 control-label font">通过</label>
+                                <div class="col-sm-8">
+                                <label style="float:left;" class="radio-inline font"><input type="radio" name="Usercheck" id="Usercheck" value="0" checked="checked">是</label>
+                                <label style="float:left;" class="radio-inline font"><input type="radio" name="Usercheck" id="Usercheck" value="1">否</label>
+                                </div>
+                                </div>';
+                    }
+                ?>
+                <div>
+                    <input type="text" id="action" name="action" value="<?php echo $_GET["action"]; ?>" readonly="true" hidden="true">
+                </div>
+                <button type="submit" class="btn btn-default btn-lg">提交</button>
+            </form>
+        </div>

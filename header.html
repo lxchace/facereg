@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IoT打卡管理系统</title>
+    <link rel="stylesheet" href="frame/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style type="text/css">
+    body {
+		background-image: url(/img/bg.jpg);
+		background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+	}
+	
+	.font {
+        color: #FFFFFF!important;
+	    text-shadow:0 0 0.2em #FFFFFF;
+    }
+    
+	.navbar {
+        font-family: Microsoft YaHei;
+        font-weight: 500;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        background:rgba(0,0,0,0.1);/*登录框透明化*/
+    }
+    
+    .dropdown-menu {
+        background:rgba(0,0,0,0.1);/*登录框透明化*/
+    }
+    
+    .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+        background:rgba(0,0,0,0.2)!important;
+    }
+    
+    .open>a, .open>a:hover, .open>a:focus {
+        background:rgba(0,0,0,0.05)!important;
+    }
+    
+    .main {
+        text-align: center;
+        display: inline;
+    }
+    
+    .icon {
+        font-family: Microsoft YaHei;
+        font-weight: 500;
+        border: 1px solid transparent;
+        border-color: #e7e7e7;
+        border-radius: 4px;
+        margin-bottom: 25px;
+        background:rgba(0,0,0,0.1);/*登录框透明化*/
+    }
+    
+    .top {
+        border-top: 1px solid transparent;
+        border-color: #e7e7e7;
+        border-radius: 4px;
+    }
+    
+    .fa {
+        margin: 15px 0px;
+    }
+    
+    .signrecord {
+        display: none;
+    }
+    
+    .needcheck {
+        display: none;
+    }
+    
+    .users {
+        display: none;
+    }
+    
+    .table th, .table td { 
+        text-align: center;
+        vertical-align: middle!important;
+    }
+    
+    .progbar {
+        margin-top: 20px;
+        margin-right: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand font" href="index.php">IoT打卡管理系统</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a class="font" href="index.php?act=signrecord">打卡记录</a></li>
+                    <li><a class="font" href="index.php?act=needcheck">录入信息</a></li>
+                    <li><a class="font" href="index.php?act=users">用户管理</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle font" data-toggle="dropdown">lxchace <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="font" href="#">个人资料</a></li>
+                            <li><a class="font" href="#">系统设置</a></li>
+                            <li><a class="font" href="#">退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
